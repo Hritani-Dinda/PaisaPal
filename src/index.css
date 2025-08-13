@@ -8,33 +8,47 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* PaisaPal Design System - Student Finance Tracker */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 15%;
 
+    /* Cards with subtle warmth */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Yellow primary theme - student-friendly and energetic */
+    --primary: 45 100% 51%;  /* #FFC107 */
+    --primary-foreground: 0 0% 15%;
+    --primary-hover: 43 100% 48%;
+    --primary-glow: 45 100% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm grey secondary */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Subtle grey tones */
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent yellow variations */
+    --accent: 42 100% 95%;
+    --accent-foreground: 0 0% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 15%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* UI Elements */
+    --border: 0 0% 90%;
+    --input: 0 0% 96%;
+    --ring: 45 100% 51%;
 
     --radius: 0.5rem;
 
@@ -52,45 +66,74 @@ All colors MUST be HSL.
 
     --sidebar-border: 220 13% 91%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 45 100% 51%;
+
+    /* Finance-specific design tokens */
+    --expense-red: 0 84% 60%;
+    --income-green: 142 76% 36%;
+    --savings-blue: 217 91% 60%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(var(--accent)));
+    --gradient-yellow: linear-gradient(135deg, hsl(45 100% 51%), hsl(42 100% 60%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.15);
+    --shadow-card: 0 2px 12px -2px hsl(0 0% 0% / 0.08);
+    --shadow-hover: 0 8px 32px -8px hsl(var(--primary) / 0.25);
+    
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode optimized for finance app */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 45 100% 55%;
+    --primary-foreground: 0 0% 8%;
+    --primary-hover: 43 100% 52%;
+    --primary-glow: 45 100% 70%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 85%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 42 100% 15%;
+    --accent-foreground: 0 0% 95%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 0 0% 20%;
+    --input: 0 0% 18%;
+    --ring: 45 100% 55%;
+    
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: 45 100% 55%;
+    --sidebar-primary-foreground: 0 0% 8%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 85%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 45 100% 55%;
+
+    /* Dark mode shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 2px 12px -2px hsl(0 0% 0% / 0.2);
+    --shadow-hover: 0 8px 32px -8px hsl(0 0% 0% / 0.4);
   }
 }
 
@@ -100,6 +143,40 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  /* Finance Card Styles */
+  .finance-card {
+    @apply bg-card rounded-2xl shadow-[var(--shadow-card)] border-border/50 transition-[var(--transition-smooth)] hover:shadow-[var(--shadow-hover)];
+  }
+  
+  /* Gradient Backgrounds */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-yellow {
+    background: var(--gradient-yellow);
+  }
+  
+  /* Button Hover Effects */
+  .btn-yellow-hover {
+    @apply transition-[var(--transition-smooth)] hover:shadow-[var(--shadow-hover)] hover:scale-105;
+  }
+  
+  /* Status Indicators */
+  .status-expense {
+    @apply text-red-600 bg-red-50 dark:text-red-400 dark:bg-red-950/30;
+  }
+  
+  .status-income {
+    @apply text-green-600 bg-green-50 dark:text-green-400 dark:bg-green-950/30;
+  }
+  
+  .status-savings {
+    @apply text-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-blue-950/30;
   }
 }
